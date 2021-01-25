@@ -3,7 +3,7 @@ import Vuex from 'vuex';
 export default new Vuex.Store({
   state: {
     movies: [],
-
+    user: {}
   },
   mutations: {
     setMovie(state, {movie}) {
