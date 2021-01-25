@@ -30,12 +30,6 @@ const routes = [
       else next()
     }
   },
-  { 
-    // path: "*",
-    path: "/:catchAll(.*)",
-    name: "NotFound",
-    component: PageNotFound,
-  },
   {
     path: '/settings',
     name: 'User',
@@ -44,6 +38,11 @@ const routes = [
       if (!store.state.user.is_logged_in) next({ name: 'Login' })
       else next()
     }
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: PageNotFound,
   }
 ]
 
